@@ -774,11 +774,37 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  
   .menu-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
   }
+
+  .chat-input-form {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .chat-input {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .chat-send-button {
+    width: 100%;
+    padding: 0.9rem;
+  }
+
+  .message-bubble {
+    max-width: 85%;
+  }
+
+  .chat-messages {
+    padding: 1rem;
+  }
 }
+
 
 @media (max-width: 768px) {
   .navbar-container {
@@ -828,3 +854,4 @@ body {
     padding: 2rem 1.5rem;
   }
 }
+
