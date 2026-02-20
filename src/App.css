@@ -531,3 +531,46 @@
   padding: 0;
   overflow: hidden;
 }
+
+.navbar-link.active {
+  color: #a8d5a8;
+  border-bottom: 2px solid #a8d5a8;
+  padding-bottom: 4px;
+}
+
+.chatbot-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.chatbot-page-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.chatbot-page h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.chatbot-page-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.chatbot-page-window {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 600px;
+  overflow: hidden;
+}
+
+.chatbot-page-window .chatbot {
+  height: 100%;
+}

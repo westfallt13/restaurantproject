@@ -1,19 +1,43 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function Navbar() {
+function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">Restaurant</Link>
+        <NavLink to="/" className="navbar-logo">Restaurant</NavLink>
         <ul className="navbar-menu">
           <li className="navbar-item">
-            <Link to="/" className="navbar-link">Home</Link>
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}
+              end
+            >
+              Home
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <Link to="/menu" className="navbar-link">Menu</Link>
+            <NavLink 
+              to="/menu" 
+              className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}
+            >
+              Menu
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <Link to="/order" className="navbar-link">Order Now</Link>
+            <NavLink 
+              to="/order" 
+              className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}
+            >
+              Order
+            </NavLink>
+          </li>
+          <li className="navbar-item">
+            <NavLink 
+              to="/chatbot" 
+              className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}
+            >
+              Chatbot
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -21,4 +45,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
