@@ -6,7 +6,7 @@ function Chatbot() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: 'Hello! I\'m your waiter assistant. How can I help you with our menu today?'
+      content: 'Welcome to The Golden Plate! I\'m your personal waiter assistant. How can I help you explore our menu today?'
     }
   ]);
   const [input, setInput] = useState('');

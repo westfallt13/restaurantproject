@@ -11,46 +11,38 @@ function OrderPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Validation
     if (!customerName.trim() || !orderText.trim()) {
       setErrorMessage('Please fill in all fields');
       return;
     }
 
-    try {
-      setLoading(true);
-      setErrorMessage('');
+    setLoading(true);
+    setErrorMessage('');
+    setSuccessMessage('');
+
+    const orderData = {
+      customer_name: customerName,
+      order_details: orderText
+    };
+
+    await submitOrder(orderData);
+
+    setSuccessMessage('🎉 Order placed successfully! Thank you for dining with The Golden Plate.');
+    setCustomerName('');
+    setOrderText('');
+
+    setTimeout(() => {
       setSuccessMessage('');
+    }, 5000);
 
-      const orderData = {
-        customer_name: customerName,
-        order_details: orderText
-      };
-
-      await submitOrder(orderData);
-
-      // Success! Clear form and show message
-      setSuccessMessage('Order placed successfully! Thank you for your order.');
-      setCustomerName('');
-      setOrderText('');
-
-      // Clear success message after 5 seconds
-      setTimeout(() => {
-        setSuccessMessage('');
-      }, 5000);
-
-    } catch (error) {
-      setErrorMessage('Failed to submit order. Please try again.');
-    } finally {
-      setLoading(false);
-    }
+    setLoading(false);
   };
 
   return (
     <div className="order-page">
       <div className="order-container">
         <h1>Place Your Order</h1>
-        <p className="order-subtitle">Fill out the form below to place your order</p>
+        <p className="order-subtitle">Let us prepare something special for you</p>
 
         {successMessage && (
           <div className="success-message">
@@ -83,7 +75,7 @@ function OrderPage() {
               id="orderText"
               value={orderText}
               onChange={(e) => setOrderText(e.target.value)}
-              placeholder="Enter your order details (e.g., 2x Burger, 1x Fries, 1x Coke)"
+              placeholder="Tell us what you'd like to order..."
               rows="6"
               disabled={loading}
             />
@@ -94,7 +86,7 @@ function OrderPage() {
             className="submit-button"
             disabled={loading}
           >
-            {loading ? 'Submitting...' : 'Place Order'}
+            {loading ? 'Processing...' : 'Place Order'}
           </button>
         </form>
       </div>

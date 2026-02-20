@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <NavLink to="/" className="navbar-logo">Restaurant</NavLink>
+        <NavLink to="/" className="navbar-logo">The Golden Plate</NavLink>
         <ul className="navbar-menu">
           <li className="navbar-item">
             <NavLink 
@@ -36,7 +36,7 @@ function NavBar() {
               to="/chatbot" 
               className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}
             >
-              Chatbot
+              Chat
             </NavLink>
           </li>
         </ul>

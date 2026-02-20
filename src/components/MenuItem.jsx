@@ -12,10 +12,5 @@ function MenuItem({ name, price, image_url }) {
   );
 }
 
-MenuItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  image_url: PropTypes.string.isRequired
-};
 
 export default MenuItem;

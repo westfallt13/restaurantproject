@@ -5,7 +5,7 @@ function ChatbotPage() {
     <div className="chatbot-page">
       <div className="chatbot-page-container">
         <h1>Chat with Our Assistant</h1>
-        <p className="chatbot-page-subtitle">Ask me anything about our menu!</p>
+        <p className="chatbot-page-subtitle">Ask me anything about The Golden Plate menu!</p>
         <div className="chatbot-page-window">
           <Chatbot />
         </div>

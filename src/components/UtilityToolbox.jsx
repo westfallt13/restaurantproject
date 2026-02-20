@@ -23,7 +23,6 @@ function UtilityToolbox() {
             </button>
           </div>
           <div className="toolbox-content">
-            {/* Temporarily show if chatbot is causing issues */}
             <Chatbot />
           </div>
         </div>
