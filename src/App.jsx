@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import OrderPage from './pages/OrderPage';
+import UtilityToolbox from './components/UtilityToolbox';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/order" element={<OrderPage />} />
           </Routes>
         </main>
+        <UtilityToolbox />
       </div>
     </Router>
   );
