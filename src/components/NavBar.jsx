@@ -12,6 +12,9 @@ function Navbar() {
           <li className="navbar-item">
             <Link to="/menu" className="navbar-link">Menu</Link>
           </li>
+          <li className="navbar-item">
+            <Link to="/order" className="navbar-link">Order Now</Link>
+          </li>
         </ul>
       </div>
     </nav>
